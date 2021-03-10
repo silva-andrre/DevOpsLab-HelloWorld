@@ -8,6 +8,11 @@ python:
 # Faz a instalação com Sudo, para ter privilégio de Super Usuário.
 #sudo: required
 
+#Definindo as informações de root:
+root:
+  dist: xenial
+  os: linux
+
 # Instalação de Módulos que são necessários para a Aplicação.
 install:
   - pip install flask
@@ -18,7 +23,8 @@ script:
 
 # Defini que o processo de Deploy será na Plataforma Heroku. É necessário informar o nome da APP criada no Heroku
 deploy:
+  strategy: api
   provider: heroku
   api_key: 
-    secure: $HEROKU_API_KEY
+    secure: EzjTe3f8iT7q51CRW8zkdNwrvNZ/KgIaENWjkFcayuGpCmdkRmqO7EyNyhWQBLtlaVLF/pgxUpKrZM1kO8OTyZBQ/v4qUXpKeKCS1DzLVyemiEL6hGRWcDl62wci91MevSD89nXBrnXR0zTrFf3d3XugwnP/3e3JCcIl+rxDw446F2wSkro3BWEp7WOm2hshN3IBaQYmdO9/SOqa29YWYN7mD82bnqazAF+Sgfbsy+hyQP/t1Gs7CLfiqw5+oErgt1xMkCUllGImhfJdMkMMuwtb4DNgY+hdHAFzjJ9S4JfZFHecUlPA+rleV8ispQaoSf24zRv2BlIAPCU6OoYX59h4Wa0w/dWXTAQ8JZRWCZYvaXudNA4KDrMfXlogSJS2L75AY3zehrDy91KEcPBpuzC2eEsmCvakND4laBX/Z79TFnsbN+vNige4iiWkxLUoaOrK6qu022eYGcROzdC1rAU8VB9bUaYewgcO0kyNh4rWUVCGHmzdTnp9c/ou6wA9HkSniaN6BI/Yk4KP4pm6sbu8OfzxKvmE4VLzdNzWRW9Ef5rqvj97cvV8lfp2PVv11zuvSPgnObJKXflscSCejH2gICqgQYrorBHYz1vpd5X8dsYrXGBBFGRxE2e9P3xy2BsHDfEJ0+c8HyFOBzbXuId3GTkSj+/MkG/BRYJepeE=
   app: silva-andrre-devopsessentials
