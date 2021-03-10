@@ -6,7 +6,7 @@ python:
   - "3.6.3"
 
 # Faz a instalação com Sudo, para ter privilégio de Super Usuário.
-sudo: required
+#sudo: required
 
 # Instalação de Módulos que são necessários para a Aplicação.
 install:
@@ -20,5 +20,5 @@ script:
 deploy:
   provider: heroku
   api-key: 
-    secure: $HEROKU_API_KEY
+    secure: HEROKU_API_KEY
   app: silva-andrre-devopsessentials
